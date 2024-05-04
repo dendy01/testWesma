@@ -141,122 +141,133 @@ body {
               align-items: center;
               font-weight: 400;
               color: #AAAAAA;
-            }
-          }
 
-          ul li:first-child {
-            color: var(--color-black);
-            background-color: var(--background-color);
+              &:hover {
+                cursor: pointer;
+              }
+            }
+
+            li.active {
+              color: var(--color-black);
+              background-color: var(--background-color);
+            }
           }
         }
 
-        .info {
-          width: 730px;
-          height: 223px;
-          display: flex;
+        .tabcontent {
+          height: 500px;
+          display: none;
+          flex-direction: column;
           justify-content: space-between;
 
-          .info__item1 {
-            width: 181px;
-            height: 100%;
-          }
-
-          .info__item1 div {
-            width: 158.85px;
-            height: 193.79px;
-            background-image: url('../assets/1609.m00.i125.n015.P.c25.435909910\ Business\ sales\ funnel\ vector\ infographics\ [преобразованный]\ 1.png');
-          }
-
-          .info__item2 {
-            width: 519px;
-            height: 218px;
-
-            .group {
-              width: 343.96px;
-              height: 208px;
-              margin-left: 136px;
-              display: flex;
-              flex-direction: column;
-              justify-content: space-between;
-
-              .attracted__person {
+          .info {
+            width: 730px;
+            height: 223px;
+            display: flex;
+            justify-content: space-between;
+  
+            .info__item1 {
+              width: 181px;
+              height: 100%;
+            }
+  
+            .info__item1 div {
+              width: 158.85px;
+              height: 193.79px;
+              background-image: url('../assets/1609.m00.i125.n015.P.c25.435909910\ Business\ sales\ funnel\ vector\ infographics\ [преобразованный]\ 1.png');
+            }
+  
+            .info__item2 {
+              width: 519px;
+              height: 218px;
+  
+              .group {
                 width: 343.96px;
-                height: 48px;
+                height: 208px;
+                margin-left: 136px;
                 display: flex;
-                align-items: center;
+                flex-direction: column;
                 justify-content: space-between;
-
-                .quantity {
-                  width: 101px;
-                  font-weight: 400;
-                  font-size: 40px;
+  
+                .attracted__person {
+                  width: 343.96px;
+                  height: 48px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+  
+                  .quantity {
+                    width: 101px;
+                    font-weight: 400;
+                    font-size: 40px;
+                  }
+  
+                  .attracted {
+                    width:  150px;
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: #AAAAAA;
+                  }
+  
+                  svg {
+                    width: 32.96px;
+                    height: 25.5px;
+                    background-image: url('../assets/Vector.png');
+                  }
                 }
-
-                .attracted {
-                  width:  150px;
-                  font-size: 14px;
-                  font-weight: 400;
-                  color: #AAAAAA;
+  
+                .applications__site {
+                  width: 309px;
+                  height: 48px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+  
+                  .quantity {
+                    width: 63px;
+                    font-weight: 400;
+                    font-size: 40px;
+                  }
+  
+                  .attracted {
+                    width:  150px;
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: #AAAAAA;
+                  }
+  
+                  svg {
+                    width: 36px;
+                    height: 30px;
+                    background-image: url('../assets/Vector1.png');
+                  }
                 }
-
-                svg {
-                  width: 32.96px;
-                  height: 25.5px;
-                  background-image: url('../assets/Vector.png');
-                }
-              }
-
-              .applications__site {
-                width: 309px;
-                height: 48px;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-
-                .quantity {
-                  width: 63px;
-                  font-weight: 400;
-                  font-size: 40px;
-                }
-
-                .attracted {
-                  width:  150px;
-                  font-size: 14px;
-                  font-weight: 400;
-                  color: #AAAAAA;
-                }
-
-                svg {
-                  width: 36px;
-                  height: 30px;
-                  background-image: url('../assets/Vector1.png');
-                }
-              }
-
-              .average__cost {
-                width: 283px;
-                height: 48px;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-
-                .quantity {
-                  width: 63px;
-                  font-weight: 400;
-                  font-size: 40px;
-                }
-
-                .attracted {
-                  width:  150px;
-                  font-size: 14px;
-                  font-weight: 400;
-                  color: #AAAAAA;
-                }
-
-                svg {
-                  width: 36px;
-                  height: 36px;
-                  background-image: url('../assets/free-icon-ruble-2769409\ 1.png');
+  
+                .average__cost {
+                  width: 283px;
+                  height: 48px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+  
+                  .quantity {
+                    width: 63px;
+                    font-weight: 400;
+                    font-size: 40px;
+                  }
+  
+                  .attracted {
+                    width:  150px;
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: #AAAAAA;
+                  }
+  
+                  svg {
+                    width: 36px;
+                    height: 36px;
+                    background-image: url('../assets/free-icon-ruble-2769409\ 1.png');
+                  }
                 }
               }
             }
@@ -331,6 +342,10 @@ body {
           color: white;
           border: none;
         }
+      }
+
+      .tabcontent {
+        display: none;
       }
     }
   }

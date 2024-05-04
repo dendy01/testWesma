@@ -29,57 +29,70 @@
             </div>
             <div class="navbar">
               <ul>
-                <li>Воронка</li>
-                <li>Было-стало</li>
-                <li>О компании</li>
-                <li>Что сделали</li>
+                <li onclick="openCity(event, 'Воронка')">Воронка</li>
+                <li onclick="openCity(event, 'Было-стало')">Было-стало</li>
+                <li onclick="openCity(event, 'О компании')">О компании</li>
+                <li onclick="openCity(event, 'Что сделали')">Что сделали</li>
               </ul>
             </div>
-            <div class="info">
-              <div class="info__item1">
-                <div></div>
-              </div>
-              <div class="info__item2">
-                <div class="group">
-                  <div class="attracted__person">
-                    <svg></svg>
-                    <p class="quantity">3 945</p>
-                    <p class="attracted">привлечено за месяц, человек</p>
+            <div style="height: 500px;">
+              <div class="tabcontent" id="Воронка">
+                <div class="info">
+                  <div class="info__item1">
+                    <div></div>
                   </div>
-                  <div class="applications__site">
-                    <svg></svg>
-                    <p class="quantity">341</p>
-                    <p class="attracted">заявок с сайта в месяц</p>
-                  </div>
-                  <div class="average__cost">
-                    <svg></svg>
-                    <p class="quantity">17</p>
-                    <p class="attracted">средняя стоимость клика, рублей</p>
+                  <div class="info__item2">
+                    <div class="group">
+                      <div class="attracted__person">
+                        <svg></svg>
+                        <p class="quantity">3 945</p>
+                        <p class="attracted">привлечено за месяц, человек</p>
+                      </div>
+                      <div class="applications__site">
+                        <svg></svg>
+                        <p class="quantity">341</p>
+                        <p class="attracted">заявок с сайта в месяц</p>
+                      </div>
+                      <div class="average__cost">
+                        <svg></svg>
+                        <p class="quantity">17</p>
+                        <p class="attracted">средняя стоимость клика, рублей</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
+                <div class="budget__info">
+                  <div class="budget">
+                    <div class="ellipce">
+                      <svg></svg>
+                    </div>
+                    <div class="budget__item">
+                      <span>
+                        68 000 ₽ / мес
+                      </span>
+                      <span>
+                        бюджет на рекламу
+                      </span>
+                    </div>
+                  </div>
+                  <p class="traffic">
+                    Трафик на сайт изменился на целевой
+                    Стоимость 1 обращения уменьшилась на 81%
+                  </p>
+                </div>
+                <div class="line"></div>
+                <button class="btn">Хочу так же!</button>
+              </div>
+              <div class="tabcontent" id="Было-стало">
+                <h1>Было-стало</h1>
+              </div>
+              <div class="tabcontent" id="О компании">
+                <h1>О компании</h1>
+              </div>
+              <div class="tabcontent" id="Что сделали">
+                <h1>Что сделали</h1>
               </div>
             </div>
-            <div class="budget__info">
-              <div class="budget">
-                <div class="ellipce">
-                  <svg></svg>
-                </div>
-                <div class="budget__item">
-                  <span>
-                    68 000 ₽ / мес
-                  </span>
-                  <span>
-                    бюджет на рекламу
-                  </span>
-                </div>
-              </div>
-              <p class="traffic">
-                Трафик на сайт изменился на целевой
-                Стоимость 1 обращения уменьшилась на 81%
-              </p>
-            </div>
-            <div class="line"></div>
-            <button class="btn">Хочу так же!</button>
           </div>
         </div>
       </div>
@@ -134,5 +147,24 @@
       </div>
     </div>
   </div>
+
+  <script>
+    function openCity(evt, cityName) {
+      let i, tabcontent, tablinks;
+
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+
+      tablinks = document.querySelectorAll("ul>li");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+  </script>
 </body>
 </html>
